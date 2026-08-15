@@ -432,3 +432,11 @@ body[data-active-view="schedule"] .editable-lesson input[data-field="1"]:focus{b
 #tasksView .filter.active{color:#2631a1}
 #tasksView .delete-task{color:#696fb1}
 #tasksView .task-date-group h3{color:#a06a12}
+.today-task-row{display:grid;grid-template-columns:48px 20px minmax(0,1fr) 24px;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #d9daf0}
+.today-task-row:last-child{border-bottom:0}
+.today-task-date{padding-right:9px;border-right:1.5px solid #b6b8df;text-align:center}
+.today-task-date strong,.today-task-date span,.today-task-copy strong,.today-task-copy small{display:block}
+.today-task-date strong{color:#a06a12;font-family:Georgia,'Times New Roman',serif;font-size:22px;line-height:1}
+.today-task-date span{margin-top:3px;color:#656ca8;font-size:9px;font-weight:700;text-transform:uppercase}
+.today-task-copy strong{color:#2631a1;font-size:13px;font-weight:750}
+.today-task-copy small{margin-top:4px;font-size:10px}

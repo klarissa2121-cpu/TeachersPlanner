@@ -370,8 +370,8 @@ function renderToday(){
   $('#todayLessons').innerHTML=todayScheduleHTML(lessons,true,'На сегодня уроков нет');
   $('#todayClassLessons').innerHTML=todayScheduleHTML(classLessons,false,'На сегодня уроков нет');
   $('#todayExtrasLessons').innerHTML=todayScheduleHTML(extrasLessons,true,'На сегодня занятий нет');
-  const open=state.tasks.filter(t=>!t.done);
-  $('#quickTasks').innerHTML=open.slice(0,4).map(taskHTML).join('')||'<p class="empty">Все дела выполнены — прекрасно!</p>';
+  const open=state.tasks.filter(t=>!t.done).sort((a,b)=>(a.date||'9999-12-31').localeCompare(b.date||'9999-12-31'));
+  $('#quickTasks').innerHTML=open.slice(0,4).map(todayTaskHTML).join('')||'<p class="empty">Все дела выполнены — прекрасно!</p>';
   $('#navTaskCount').textContent=open.length;
   const futureHolidays=state.events.filter(e=>e.type==='holiday'&&parseDate(e.date)>=d).sort((a,b)=>a.date.localeCompare(b.date));
   $('#holidayDays').textContent=futureHolidays.length?Math.ceil((parseDate(futureHolidays[0].date)-d)/86400000):'—';
@@ -398,6 +398,7 @@ function updateSchoolClock(){
   if(next){const nextStart=clockMinutes(next[0]),previous=[...lessons].reverse().find(l=>clockMinutes(l[4])<=current);const start=previous?clockMinutes(previous[4]):Math.floor(current);const left=Math.max(1,Math.ceil(nextStart-current));label.textContent=previous?'Перемена':'До начала занятий';remaining.textContent=previous?`До конца перемены ${left} мин.`:`Первый урок через ${left} мин.`;bar.style.width=previous?`${Math.max(0,Math.min(100,(current-start)/(nextStart-start)*100))}%`:'0%';return;}
   label.textContent='Уроки на сегодня закончились';remaining.textContent='';bar.style.width='100%';
 }
+function todayTaskHTML(t){const date=t.date?parseDate(t.date):null;return `<div class="today-task-row ${t.done?'done':''}"><div class="today-task-date"><strong>${date?date.getDate():'—'}</strong><span>${date?fmt(date,{month:'short'}):'без даты'}</span></div><button class="check" data-task="${t.id}" aria-label="Выполнить">${t.done?'✓':''}</button><div class="today-task-copy"><strong>${escapeHTML(t.text)}</strong><small><span class="priority ${t.priority}">${{high:'важно',medium:'обычно',low:'не срочно'}[t.priority]}</span></small></div><button class="delete-task" data-id="${t.id}" aria-label="Удалить задачу" title="Удалить задачу">✕</button></div>`;}
 function taskHTML(t){return `<div class="task-row ${t.done?'done':''}"><button class="check" data-task="${t.id}" aria-label="Выполнить">${t.done?'✓':''}</button><div><strong>${escapeHTML(t.text)}</strong><small>${fmt(t.date)} · <span class="priority ${t.priority}">${{high:'важно',medium:'обычно',low:'не срочно'}[t.priority]}</span></small></div><button class="delete-task" data-id="${t.id}" aria-label="Удалить задачу" title="Удалить задачу">✕</button></div>`;}
 function renderTasks(){
   let list=state.tasks.slice().sort((a,b)=>(a.date||'9999-12-31').localeCompare(b.date||'9999-12-31')||a.done-b.done);
