@@ -101,3 +101,4 @@ html,body,.auth-layout{background:#fbf9fc url('iris-page-background.png') center
 .submit:hover{background:linear-gradient(135deg,#5e57ae 0%,#443e94 100%)}
 .remember{color:#45489a}
 .remember input{accent-color:#5b54ad}
+#forgotButton{display:none}
