@@ -461,3 +461,4 @@ body[data-active-view="schedule"] .editable-lesson input[data-field="1"]:focus{b
 #todayView .today-task-row.priority-medium{border-left:4px solid #d29b45}
 #todayView .today-task-row.priority-low{border-left:4px solid #65a68d}
 #todayView .today-events .event-date strong,#todayView .today-events .event-date span{color:#a06a12!important}
+#todayView .today-events .event-date strong,#todayView .today-tasks .today-task-date strong{color:#a06a12!important;font-family:Georgia,'Times New Roman',serif;font-size:20px!important;font-weight:700;line-height:1!important}
