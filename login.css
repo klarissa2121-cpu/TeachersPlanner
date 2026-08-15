@@ -1,0 +1,103 @@
+:root{--green:#173f38;--ink:#192723;--muted:#74817d;--line:#dfe5e1}*{box-sizing:border-box}body{margin:0;min-height:100vh;color:var(--ink);background:#f7f8f5;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}.auth-layout{min-height:100vh;display:grid;grid-template-columns:minmax(380px,45%) 1fr}.welcome{position:relative;overflow:hidden;display:flex;flex-direction:column;padding:42px 5vw;background:var(--green);color:white}.welcome::before,.welcome::after{content:"";position:absolute;border:1px solid #ffffff18;border-radius:50%}.welcome::before{width:500px;height:500px;right:-300px;top:-180px}.welcome::after{width:400px;height:400px;left:-260px;bottom:-180px}.auth-brand{position:relative;z-index:1;display:flex;align-items:center;gap:13px;color:white;text-decoration:none}.auth-brand>span{display:grid;place-items:center;width:43px;height:43px;border-radius:13px;background:#efd295;color:var(--green);font-family:Georgia,serif;font-size:24px}.auth-brand strong{font-size:18px}.auth-brand small{display:block;margin-top:2px;color:#b8cac4;font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.12em}.welcome-copy{position:relative;z-index:1;margin:auto 0}.welcome-copy>p:first-child{color:#e9c987;font-size:11px;font-weight:700;letter-spacing:.2em}.welcome h1{margin:18px 0;font-family:Georgia,serif;font-size:clamp(38px,4vw,62px);font-weight:400;line-height:1.08}.lead{max-width:470px;color:#bdd0ca;font-size:15px;line-height:1.7}.welcome blockquote{position:relative;z-index:1;margin:0;max-width:390px;padding-left:17px;border-left:2px solid #e7c77f;color:#b9cbc6;font-family:Georgia,serif;font-size:13px;font-style:italic}.auth-panel{display:grid;place-items:center;padding:40px}.auth-card{width:min(430px,100%)}.tabs{display:flex;gap:4px;margin-bottom:45px;padding:4px;border-radius:11px;background:#eaeeea}.tab{flex:1;padding:10px;border:0;border-radius:8px;background:transparent;color:#74817d;font-size:12px;font-weight:700;cursor:pointer}.tab.active{background:white;color:var(--green);box-shadow:0 2px 10px #263a3314}.eyebrow{margin:0 0 8px;color:#9a7b42;font-size:10px;font-weight:800;letter-spacing:.16em}.auth-heading h2{margin:0;font-family:Georgia,serif;font-size:32px;font-weight:400}.auth-heading>p:last-child{margin:10px 0 28px;color:var(--muted);font-size:12px}label{display:grid;gap:8px;margin-bottom:17px;color:#52615d;font-size:11px;font-weight:700}input{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:9px;background:white;color:var(--ink);font:inherit;outline:0}input:focus{border-color:#709087;box-shadow:0 0 0 3px #75978d18}.password-wrap{position:relative}.password-wrap input{padding-right:45px}.password-wrap button{position:absolute;right:6px;top:5px;width:34px;height:34px;border:0;background:transparent;color:#99a5a1;cursor:pointer}.password-wrap button.visible{color:var(--green)}.form-options{display:flex;align-items:center;justify-content:space-between;margin:2px 0 5px}.remember{display:flex;align-items:center;gap:7px;margin:0;font-size:10px}.remember input{width:15px;height:15px;accent-color:var(--green)}.text-button{border:0;background:none;color:#486f66;font-size:10px;font-weight:700;cursor:pointer}.message{min-height:18px;margin:8px 0;font-size:11px}.message.error{color:#ad4d43}.message.info{color:#537970}.submit{display:flex;align-items:center;justify-content:space-between;width:100%;margin-top:5px;padding:14px 17px;border:0;border-radius:9px;background:var(--green);color:white;font-weight:700;cursor:pointer}.submit:hover{background:#28564d}.privacy{margin:24px 0 0;color:#98a29f;font-size:10px;text-align:center}.hidden{display:none}@media(max-width:760px){.auth-layout{grid-template-columns:1fr}.welcome{min-height:230px;padding:25px}.welcome-copy{margin:42px 0 15px}.welcome h1{margin:10px 0;font-size:34px}.welcome blockquote{display:none}.auth-panel{padding:35px 22px}.tabs{margin-bottom:30px}}
+
+/* Botanical iris styling — button rules intentionally stay unchanged. */
+:root{--ink:#292b5c;--muted:#77799a;--line:#dcdeeb}
+body{background:#fbfaf7;color:var(--ink)}
+.auth-layout{position:relative;isolation:isolate;background:linear-gradient(115deg,#f6f7fc 0,#fffefb 49%,#f2f3fa 100%)}
+.auth-layout::before{content:"";position:fixed;inset:0;background:url('iris-botanical-bg.png') center/cover no-repeat;opacity:.14;z-index:-1;pointer-events:none}
+.welcome{margin:24px 0 24px 24px;padding:38px clamp(32px,5vw,78px);border:1px solid #d9dbea;border-radius:28px 0 0 28px;background:linear-gradient(135deg,#eef1facc,#fffdf4e8);color:#30336f;box-shadow:0 22px 65px rgba(67,65,116,.10)}
+.welcome::before{display:block;width:360px;height:520px;right:-80px;top:auto;bottom:-180px;border:0;border-radius:0;background:url('iris-botanical-bg.png') left bottom/cover no-repeat;opacity:.28}
+.welcome::after{display:block;width:240px;height:340px;left:-85px;bottom:-100px;border:0;border-radius:0;background:url('iris-botanical-bg.png') right top/cover no-repeat;opacity:.2}
+.auth-brand{color:#353879}.auth-brand small{color:#777aa0}.auth-brand strong{font-family:Georgia,'Times New Roman',serif;font-size:23px;font-weight:500}.welcome-copy>p:first-child,.eyebrow{color:#a17c32}.welcome h1{max-width:650px;color:#303475;font-size:clamp(42px,4.2vw,66px);letter-spacing:-.025em}.lead{max-width:540px;color:#686b90;font-size:16px}.welcome blockquote{max-width:470px;padding:15px 18px;border-color:#bd984e;border-radius:0 12px 12px 0;background:#fffefaad;color:#555980}
+.auth-panel{position:relative;padding:56px clamp(28px,6vw,90px)}
+.auth-card{width:min(470px,100%);padding:42px;border:1px solid #dcdeea;border-radius:24px;background:#fffefbed;box-shadow:0 22px 70px rgba(57,55,103,.13);backdrop-filter:blur(12px)}
+.tabs{margin-bottom:38px;background:#eff0f7}.auth-heading h2{color:#353879;font-size:38px}.auth-heading>p:last-child{color:#77799a;font-size:13px;line-height:1.55}label{color:#454878}input{border-color:#dcdeeb;background:#fffefa;color:#30325f}input:focus{border-color:#777bb6;box-shadow:0 0 0 3px #777bb619}.privacy{color:#9294ae}
+@media(max-width:900px){.auth-layout{grid-template-columns:minmax(330px,42%) 1fr}.welcome{padding:32px}.auth-card{padding:34px}}
+@media(max-width:760px){.auth-layout::before{background-position:38% center;opacity:.1}.welcome{min-height:285px;margin:0;border-width:0 0 1px;border-radius:0;padding:26px}.welcome::before{right:-100px;bottom:-230px;opacity:.22}.welcome h1{font-size:36px}.lead{font-size:13px}.auth-panel{padding:28px 18px 44px}.auth-card{padding:28px 22px;border-radius:20px}.auth-heading h2{font-size:32px}}
+
+/* Clearly visible flowers on both sides of the auth screen. */
+.welcome::before{width:430px;height:650px;right:-115px;bottom:-185px;background-position:left bottom;background-size:520px auto;opacity:.55}
+.welcome::after{width:300px;height:430px;left:-95px;bottom:-75px;background-position:right bottom;background-size:390px auto;opacity:.34}
+.auth-panel::before,.auth-panel::after{content:"";position:absolute;pointer-events:none;background-image:url('iris-botanical-bg.png');background-repeat:no-repeat;z-index:0}
+.auth-panel::before{top:-60px;right:-105px;width:320px;height:470px;background-position:78% top;background-size:440px auto;opacity:.38}
+.auth-panel::after{left:-80px;bottom:-110px;width:270px;height:400px;background-position:left bottom;background-size:330px auto;opacity:.2}
+.auth-card{position:relative;z-index:1}
+@media(max-width:760px){.welcome::before{right:-135px;bottom:-250px;opacity:.4}.welcome::after{display:none}.auth-panel::before{right:-155px;top:-35px;opacity:.2}.auth-panel::after{display:none}}
+
+/* Shared full-page background supplied by the user. */
+html{min-height:100%;background:#fbf9fc url('iris-page-background.png') center center/cover fixed no-repeat}
+body{min-height:100vh;background:transparent}
+.auth-layout{background:transparent}
+.auth-layout::before{content:"";position:fixed;inset:0;background:url('iris-page-background.png') center center/cover no-repeat;opacity:1;z-index:-1}
+.welcome{background:rgba(248,247,253,.66);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.welcome::before,.welcome::after,.auth-panel::before,.auth-panel::after{display:none}
+.auth-panel{background:rgba(255,253,251,.3)}
+.auth-card{background:rgba(255,254,252,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+@media(max-width:760px){html,.auth-layout::before{background-position:62% center}.welcome{background:rgba(248,247,253,.8)}.auth-panel{background:rgba(255,253,251,.48)}}
+
+/* Unified bright typography used throughout the planner. */
+:root{--ink:#1d278b;--muted:#46519a}
+body,.welcome,.auth-panel,.auth-card,label,input{color:#1d278b}.welcome h1,.auth-heading h2,.auth-brand,.auth-brand strong{color:#2631a1}.lead,.auth-heading>p:last-child,.privacy,.auth-brand small{color:#48549c}input::placeholder{color:#747cae;opacity:1}
+
+/* The same full-page floral background as the planner. */
+html,body,.auth-layout{background:#fbf9fc url('iris-page-background.png') center center/cover fixed no-repeat}
+.auth-layout::before,.welcome::before,.welcome::after,.auth-panel::before,.auth-panel::after{display:none}
+.welcome{margin:0;border:0;border-radius:0;background:transparent;box-shadow:none;backdrop-filter:none}.auth-panel{background:transparent}.auth-card{background:rgba(255,254,252,.92);box-shadow:0 22px 70px rgba(57,55,103,.16);backdrop-filter:blur(12px)}
+@media(max-width:760px){html,body,.auth-layout{background-position:62% center}.welcome{background:rgba(255,254,252,.2)}}
+
+/* Remove all decorative copy and leave the background unobstructed. */
+.welcome{display:none}.auth-layout{display:grid;grid-template-columns:1fr}.auth-panel{justify-items:end;padding-right:8vw}.auth-card{margin-left:auto}
+@media(max-width:760px){.auth-panel{justify-items:center;padding:28px 18px 44px}.auth-card{margin:0 auto}}
+
+/* Centered login panel with planner title. */
+.auth-panel{place-items:center;padding:40px}.auth-card{margin:0 auto}.auth-card::before{content:"Планер учителя\A 2026–2027";display:block;margin:0 0 25px;color:#2631a1;font-family:Georgia,'Times New Roman',serif;font-size:28px;font-weight:500;line-height:1.2;text-align:center;white-space:pre}.auth-card::first-line{font-size:30px}
+@media(max-width:760px){.auth-panel{padding:28px 18px}.auth-card::before{font-size:24px}}
+@media(min-width:761px){.auth-card{transform:translateX(-110px)}}
+@media(min-width:761px){.auth-card{transform:translateX(-190px)}}
+.auth-card::before{color:#3039a0;font-family:"Monotype Corsiva","Segoe Script","Brush Script MT",Georgia,cursive;font-size:36px;font-weight:500;letter-spacing:.015em;line-height:1.15;text-shadow:0 2px 10px rgba(75,68,139,.12)}
+@media(min-width:1101px){.auth-card{transform:translateX(-260px)}}
+@media(min-width:761px) and (max-width:1100px){.auth-card{transform:translateX(-120px)}}
+.auth-card::before{display:none;content:none}.login-planner-title{margin:0 0 24px;text-align:center}.login-planner-title strong,.login-planner-title span{display:block}.login-planner-title strong{color:#3039a0;font-family:"Monotype Corsiva","Segoe Script","Brush Script MT",Georgia,cursive;font-size:44px;font-weight:500;line-height:1.05;text-shadow:0 2px 10px rgba(75,68,139,.12)}.login-planner-title span{margin-top:8px;color:#555da1;font-family:Georgia,'Times New Roman',serif;font-size:18px;font-weight:600;letter-spacing:.12em}.auth-heading h2{font-size:42px}
+@media(min-width:1101px){.auth-card{transform:translateX(-220px)}}
+@media(max-width:760px){.login-planner-title strong{font-size:36px}.login-planner-title span{font-size:15px}.auth-heading h2{font-size:34px}}
+.login-planner-title strong,.login-planner-title span{color:#3039a0;font-family:"Monotype Corsiva","Segoe Script","Brush Script MT",Georgia,cursive;font-size:36px;font-weight:500;letter-spacing:.015em;line-height:1.15;text-shadow:0 2px 10px rgba(75,68,139,.12)}
+.login-planner-title span{margin-top:0}
+.auth-heading h2{font-size:38px}
+@media(max-width:760px){.login-planner-title strong,.login-planner-title span{font-size:24px}.auth-heading h2{font-size:32px}}
+.login-planner-title{display:none}
+.auth-card::before{content:"Планер учителя\A 2026–2027";display:block;margin:0 0 25px;color:#2631a1;font-family:Georgia,'Times New Roman',serif;font-size:28px;font-weight:500;line-height:1.2;text-align:center;white-space:pre;text-shadow:none;letter-spacing:normal}
+@media(max-width:760px){.auth-card::before{font-size:24px}}
+.auth-heading h2{font-size:32px}
+@media(max-width:760px){.auth-heading h2{font-size:28px}}
+.eyebrow{display:none}
+.auth-heading h2{font-size:28px}
+@media(max-width:760px){.auth-heading h2{font-size:26px}}
+.auth-card::before{font-size:34px}
+@media(max-width:760px){.auth-card::before{font-size:28px}}
+.auth-card::before{display:none}
+.login-planner-title{display:block;margin:0 0 25px;text-align:center}
+.login-planner-title strong{display:block;color:#2631a1;font-family:Georgia,'Times New Roman',serif;font-size:42px;font-weight:700;line-height:1.15;letter-spacing:normal;text-shadow:none}
+.login-planner-title span{display:block;margin-top:2px;color:#2631a1;font-family:Georgia,'Times New Roman',serif;font-size:34px;font-weight:500;line-height:1.2;letter-spacing:normal;text-shadow:none}
+@media(max-width:760px){.login-planner-title strong{font-size:34px}.login-planner-title span{font-size:28px}}
+.login-planner-title strong{font-size:48px}
+@media(max-width:760px){.login-planner-title strong{font-size:38px}}
+.login-planner-title strong{font-size:54px}
+@media(max-width:760px){.login-planner-title strong{font-size:42px}}
+.login-planner-title strong{font-size:72px}
+@media(max-width:760px){.login-planner-title strong{font-size:54px}}
+.login-planner-title strong{font-size:90px}
+@media(max-width:760px){.login-planner-title strong{font-size:66px}}
+.login-planner-title strong{font-size:108px}
+@media(min-width:1101px){.auth-card{transform:translate(-220px,-45px)}}
+@media(min-width:761px) and (max-width:1100px){.auth-card{transform:translate(-120px,-35px)}}
+@media(max-width:760px){.login-planner-title strong{font-size:78px}.auth-card{transform:translateY(-20px)}}
+@media(min-width:1101px){.auth-card{transform:translateX(-220px)}}
+@media(min-width:761px) and (max-width:1100px){.auth-card{transform:translateX(-120px)}}
+@media(max-width:760px){.auth-card{transform:none}}
+.login-planner-title strong{position:relative;top:-18px}
+.auth-card{width:min(400px,100%);padding:30px 32px;border-radius:20px}
+@media(max-width:760px){.auth-card{padding:24px 20px;border-radius:18px}}
+.submit{background:linear-gradient(135deg,#6962bb 0%,#5049a5 100%);box-shadow:0 8px 20px rgba(80,73,165,.24)}
+.submit:hover{background:linear-gradient(135deg,#5e57ae 0%,#443e94 100%)}
+.remember{color:#45489a}
+.remember input{accent-color:#5b54ad}
